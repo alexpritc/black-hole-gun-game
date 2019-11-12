@@ -937,8 +937,8 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194229}
   m_Layer: 11
   m_Name: FPS Camera
   m_TagString: MainCamera
@@ -1021,9 +1021,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c6af8a5fefef5a45ac1f76d47c32e75, type: 3}
+  m_Script: {fileID: 11500000, guid: fb15833db3ccc4441b72f62784a42715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 5670317811677292987, guid: ddd46e916998e684085e4fd234704145, type: 3}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,9 +1034,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5835e830b96aa43aaee6114888e39f, type: 3}
+  m_Script: {fileID: 11500000, guid: 394db60940581de43b1e10a524b9a6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSensitivity: 100
+  playerBody: {fileID: 1808730245}
 --- !u!1 &1529417047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808730243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 08949e53049802641a95c79dd1720116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1968268152
