@@ -18,7 +18,7 @@ public class Blackhole : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && PlayerRayCast.hasPlayerGotBlackholeGun)
         {
             if (currentBlackhole != null)
             {

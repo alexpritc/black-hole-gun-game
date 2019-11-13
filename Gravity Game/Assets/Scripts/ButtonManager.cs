@@ -16,7 +16,6 @@ public class ButtonManager : MonoBehaviour
     {
         if (isLookingAtButton && Input.GetKeyUp(KeyCode.E))
         {
-            Debug.Log("Pressing Button");
             if (numberOfTimesPressed < spawnPoints.Length)
             {
                 if (Blackhole.currentBlackhole == null)
@@ -33,7 +32,7 @@ public class ButtonManager : MonoBehaviour
 
             if (numberOfTimesPressed == 3)
             {
-                numberOfTimesPressed = 0;
+                gameObject.SetActive(false);
             }
         }
     }
