@@ -849,6 +849,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6958726887779450683, guid: 68577e84504b2664e959d66638ce849a,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68577e84504b2664e959d66638ce849a, type: 3}
 --- !u!1 &621313894

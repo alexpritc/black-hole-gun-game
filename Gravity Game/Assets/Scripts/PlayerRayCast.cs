@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRayCast : MonoBehaviour
 {
-    public static bool hasPlayerGotBlackholeGun = false;
+    public static bool hasPlayerGotBlackholeGun = true;
 
     public GameObject prefab;
 
