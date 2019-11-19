@@ -16,23 +16,21 @@ public class ButtonManager : MonoBehaviour
     {
         if (isLookingAtButton && Input.GetKeyUp(KeyCode.E))
         {
-            if (numberOfTimesPressed < spawnPoints.Length)
+            if (Blackhole.currentBlackhole == null)
             {
-                if (Blackhole.currentBlackhole == null)
-                {
-                    Blackhole.currentBlackhole = Instantiate(prefab, spawnPoints[numberOfTimesPressed].transform.position, prefab.transform.rotation);
-                }
-                else
-                {
-                    Destroy(GameObject.Find("Blackhole(Clone)"));
-                    Blackhole.currentBlackhole = Instantiate(prefab, spawnPoints[numberOfTimesPressed].transform.position, prefab.transform.rotation);
-                }
+                Blackhole.currentBlackhole = Instantiate(prefab, spawnPoints[numberOfTimesPressed].transform.position, prefab.transform.rotation);
             }
+            else
+            {
+                Destroy(GameObject.Find("Blackhole(Clone)"));
+                Blackhole.currentBlackhole = Instantiate(prefab, spawnPoints[numberOfTimesPressed].transform.position, prefab.transform.rotation);
+            }
+
             numberOfTimesPressed++;
 
             if (numberOfTimesPressed == 3)
             {
-                gameObject.SetActive(false);
+                numberOfTimesPressed = 0;
             }
         }
     }
