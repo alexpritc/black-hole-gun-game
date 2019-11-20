@@ -27,13 +27,13 @@ public class PressurePlateDoorAndLift : MonoBehaviour
         if (isDown)
         {
             gameObject.GetComponent<MeshRenderer>().material = pink;
-            liftAnim.SetBool("liftDown", false);
+            liftAnim.SetBool("isDown", false);
             doorAnim.SetBool("doorUp", true);
         }
         else
         {
             gameObject.GetComponent<MeshRenderer>().material = red;
-            liftAnim.SetBool("liftDown", true);
+            liftAnim.SetBool("isDown", true);
             doorAnim.SetBool("doorUp", false);
         }
     }

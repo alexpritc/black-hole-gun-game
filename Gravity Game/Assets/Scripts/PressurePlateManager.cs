@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+public class PressurePlateManager : MonoBehaviour
 {
-    public GameObject lift;
-
     public Material pink;
     public Material red;
 
-    private Animator liftAnim;
+    private Animator anim;
 
     private bool isDown;
 
     // Start is called before the first frame update
     void Start()
     {
-        liftAnim = lift.GetComponent<Animator>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -24,18 +22,18 @@ public class PressurePlate : MonoBehaviour
         if (isDown)
         {
             gameObject.GetComponent<MeshRenderer>().material = pink;
-            liftAnim.SetBool("isDown", true);
+            anim.SetBool("isDown", true);
         }
         else
         {
             gameObject.GetComponent<MeshRenderer>().material = red;
-            liftAnim.SetBool("isDown", false);
+            anim.SetBool("isDown", false);
         }
     }
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == 9 && 
+        if (other.gameObject.layer == 9 &&
             other.gameObject.GetComponent<Rigidbody>().mass >= 1)
         {
             isDown = true;
