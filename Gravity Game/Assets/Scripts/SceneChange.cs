@@ -7,12 +7,28 @@ public class SceneChange : MonoBehaviour
 {
     public string sceneName;
 
+    public void ButtonClicked()
+    {
+        SceneManager.LoadScene(sceneName);
+        Blackhole.currentBlackhole = null;
+
+        if (sceneName == "Controls" || sceneName == "Menu")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Game End")
         {
             SceneManager.LoadScene(sceneName);
             Blackhole.currentBlackhole = null;
+
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

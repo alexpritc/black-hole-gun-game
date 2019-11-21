@@ -8,7 +8,7 @@ public class Blackhole : MonoBehaviour
 
     public LayerMask moveableObjectMask;
 
-    private float pullDistance = 5f;
+    private float pullDistance = 10f;
     private float maxMass = 3f;
     private float force = 500f;
 
