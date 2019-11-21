@@ -16,7 +16,7 @@ public class PlayerRayCast : MonoBehaviour
     private Vector3 fwd;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         fwd = transform.TransformDirection(Vector3.forward);
 
