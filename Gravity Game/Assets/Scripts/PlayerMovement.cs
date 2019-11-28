@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private float speed = 7.5f;
     private float distanceToGround = 1.2f;
-    private float gravity = -9.85f;
+    private float gravity = -19.7f;
     private float jumpHeight = 2f;
 
     private Vector3 velocity;
@@ -19,9 +19,12 @@ public class PlayerMovement : MonoBehaviour
 
     private RaycastHit hit;
 
+    private Transform playerTransform;
+
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
+        playerTransform = transform;
         isGrounded = true;
     }
 
@@ -33,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
-            Debug.Log("Jump!");
+            //Debug.Log("Jump!");
 
             isGrounded = false;
         }
@@ -43,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         // Local movement according to player's rotation.
-        move = transform.right * x + transform.forward * z;
+        move = playerTransform.right * x + playerTransform.forward * z;
 
         // Apply gravity to velocity.
         velocity.y += gravity * Time.deltaTime;
