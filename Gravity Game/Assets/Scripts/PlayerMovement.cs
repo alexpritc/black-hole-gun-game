@@ -21,9 +21,13 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform playerTransform;
 
+    private AudioSource walkingAudio;
+
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
+        walkingAudio = gameObject.GetComponent<AudioSource>();
+
         playerTransform = transform;
         isGrounded = true;
     }
@@ -44,6 +48,23 @@ public class PlayerMovement : MonoBehaviour
         // Get movement input.
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+        if (x == 0 && z == 0)
+        {
+            walkingAudio.Pause();
+        }
+        else
+        {
+            if (!walkingAudio.isPlaying)
+            {
+                walkingAudio.Play();
+            } 
+        }
+
+        if (!isGrounded)
+        {
+            walkingAudio.Pause();
+        }
 
         // Local movement according to player's rotation.
         move = playerTransform.right * x + playerTransform.forward * z;
