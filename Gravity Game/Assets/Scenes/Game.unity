@@ -8899,6 +8899,10 @@ PrefabInstance:
       propertyPath: landingAudio
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 763954708, guid: 68577e84504b2664e959d66638ce849a, type: 3}
+      propertyPath: sceneName
+      value: Menu 2.0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 763954707, guid: 68577e84504b2664e959d66638ce849a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 68577e84504b2664e959d66638ce849a, type: 3}

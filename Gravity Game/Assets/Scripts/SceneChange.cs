@@ -19,6 +19,11 @@ public class SceneChange : MonoBehaviour
         }
     }
 
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Game End")
