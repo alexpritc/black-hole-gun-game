@@ -11,6 +11,8 @@ public class PressurePlateManager : MonoBehaviour
 
     private bool isDown;
 
+    public AudioSource ppAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class PressurePlateManager : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().mass >= 1)
         {
             isDown = true;
+
+            ppAudio.Play();
         }
     }
 

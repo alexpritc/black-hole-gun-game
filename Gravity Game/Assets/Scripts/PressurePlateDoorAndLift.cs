@@ -15,6 +15,8 @@ public class PressurePlateDoorAndLift : MonoBehaviour
 
     private bool isDown;
 
+    public AudioSource ppAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,7 @@ public class PressurePlateDoorAndLift : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().mass >= 1)
         {
             isDown = true;
+            ppAudio.Play();
         }
     }
 

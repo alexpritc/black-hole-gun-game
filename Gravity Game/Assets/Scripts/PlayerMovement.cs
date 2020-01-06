@@ -21,12 +21,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform playerTransform;
 
-    private AudioSource walkingAudio;
+    public AudioSource walkingAudio;
+    public AudioSource jumpingAudio;
 
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
-        walkingAudio = gameObject.GetComponent<AudioSource>();
 
         playerTransform = transform;
         isGrounded = true;
@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
             //Debug.Log("Jump!");
+
+            jumpingAudio.Play();
 
             isGrounded = false;
         }

@@ -16,6 +16,14 @@ public class Blackhole : MonoBehaviour
 
     private Collider[] hitColliders;
 
+    public AudioSource blackholeAudio;
+    public AudioSource sparkAudio;
+
+    private void Start()
+    {
+        blackholeAudio.Play();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(1) && PlayerRayCast.hasPlayerGotBlackholeGun)
@@ -39,6 +47,11 @@ public class Blackhole : MonoBehaviour
             if (hitColliders != null)
             {
                 PullObjectsInRadius();
+                sparkAudio.Play();
+            }
+            else
+            {
+                sparkAudio.Pause();
             }
         }
     }
