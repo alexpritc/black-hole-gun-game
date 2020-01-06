@@ -9608,8 +9608,8 @@ MonoBehaviour:
   moveableObjectMask:
     serializedVersion: 2
     m_Bits: 512
-  blackholeAudio: {fileID: -6890635969358115108}
-  sparkAudio: {fileID: -1882230246799460923}
+  blackholeAudio: {fileID: -1882230246799460923}
+  sparkAudio: {fileID: -6890635969358115108}
 --- !u!82 &-6890635969358115108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9622,7 +9622,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 98ef2db6593565b46b158ab409223e41, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1.85
   Loop: 1
   Mute: 0
@@ -9718,8 +9718,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0388fe4fc9ced994f9110a9a0c5b4808, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.575
-  m_Pitch: 1.85
+  m_Volume: 0.6
+  m_Pitch: 2.05
   Loop: 1
   Mute: 0
   Spatialize: 0
