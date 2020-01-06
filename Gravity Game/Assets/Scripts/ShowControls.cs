@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ShowControls : MonoBehaviour
 {
-    public GameObject desc;
     public GameObject controls;
 
     private bool isShowing;
@@ -13,7 +12,6 @@ public class ShowControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        desc.SetActive(true);
         controls.SetActive(false);
 
         isShowing = false;
@@ -23,13 +21,11 @@ public class ShowControls : MonoBehaviour
     {
         if (isShowing)
         {
-            desc.SetActive(true);
             controls.SetActive(false);
 
             isShowing = false;
         }
         else {
-            desc.SetActive(false);
             controls.SetActive(true);
 
             isShowing = true;
