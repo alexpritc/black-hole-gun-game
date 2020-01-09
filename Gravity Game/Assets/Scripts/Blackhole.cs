@@ -58,7 +58,7 @@ public class Blackhole : MonoBehaviour
 
     void PullObjectsInRadius()
     {
-        // Are the objects small enough to be pulled?
+        // Are the objects' mass values small enough to be pulled?
         // Yes - pull them.
         // No - do nothing.
 
